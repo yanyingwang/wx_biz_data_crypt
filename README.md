@@ -10,7 +10,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/signatur
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'wx_biz_data_crypt, github: 'yanyingwang/wx_biz_data_crypt'
+gem 'wx_biz_data_crypt', github: 'yanyingwang/wx_biz_data_crypt'
 ```
 
 And then execute:
