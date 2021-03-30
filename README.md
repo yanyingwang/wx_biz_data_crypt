@@ -10,16 +10,16 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/signatur
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'wx_biz_data_crypt'
+gem 'wx_biz_data_crypt, github: 'yanyingwang/wx_biz_data_crypt'
 ```
 
 And then execute:
 
     $ bundle install
 
-Or install it yourself as:
+<!-- Or install it yourself as: -->
 
-    $ gem install wx_biz_data_crypt
+<!--     $ gem install wx_biz_data_crypt -->
 
 ## Usage
 Run `bin/console`, and try code below:
