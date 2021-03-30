@@ -22,7 +22,7 @@ And then execute:
 <!--     $ gem install wx_biz_data_crypt -->
 
 ## Usage
-Run `bin/console`, and try code below:
+### Run `bin/console`, and try code below:
 ```ruby
 # the ids and keys is from the official demonstation code at https://res.wx.qq.com/wxdoc/dist/assets/media/aes-sample.eae1f364.zip
 app_id = 'wx4f4bc4dec97d474b'
@@ -38,6 +38,21 @@ WxBizDataCrypt::Base.new(app_id, encoded_session_key).decrypt(encoded_encrypted_
 WxBizDataCrypt.decrypt(encoded_session_key, encoded_encrypted_data, encoded_iv)
 ```
 
+### For using this gem in Rails, you may need:
+1. Add below to a initializer file:
+```ruby
+require 'wx_biz_data_crypt'
+```
+
+2. Capture raised errors:
+```ruby
+begin
+  plain_data = WxBizDataCrypt.decrypt(encoded_session_key, encoded_encrypted_data, encoded_iv)
+rescue => e
+  Rails.logger.error e.backtrace.join("\n")
+  return render json: { msg: "unknown exception: #{e.to_s}" }, status: 500
+end
+```
 
 
 ## Development
