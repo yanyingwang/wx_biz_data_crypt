@@ -4,3 +4,8 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake", "~> 12.0"
+gem 'activesupport'
+
+group :development do
+  gem 'pry'
+end
